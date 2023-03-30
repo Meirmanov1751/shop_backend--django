@@ -21,11 +21,16 @@ from rest_framework.routers import DefaultRouter
 
 from shop.urls import router as shop_router
 from city.urls import router as city_router
+from general.views import app_version, ios_version, android_version
+from user.urls import router as user_router
+from general.urls import router as general_router
 
 router = DefaultRouter()
 
 router.registry.extend(shop_router.registry)
 router.registry.extend(city_router.registry)
+router.registry.extend(general_router.registry)
+router.registry.extend(user_router.registry)
 
 urlpatterns = [
     path('admin/', admin.site.urls),

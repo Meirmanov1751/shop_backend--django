@@ -42,10 +42,11 @@ INSTALLED_APPS = [
     'shop',
     'city',
     'order',
+    'user',
+    'general',
+    'notification'
 ]
-# 'user',
-# 'general',
-# 'notification'
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

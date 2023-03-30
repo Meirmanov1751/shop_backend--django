@@ -3,7 +3,7 @@ from django.db import models
 from django.utils import timezone
 
 from general.models import MediaFile
-from notification.tasks import send_notification_to_user
+#from notification.tasks import send_notification_to_user
 
 
 class MyUserManager(BaseUserManager):
@@ -100,8 +100,8 @@ class User(AbstractBaseUser):
         management_company = self.managementcompany_set.all()
         return self.role == User.ROLES.MANAGEMENT_COMPANY and management_company.exists()
 
-    def send_notification(self, title, body, url=None, extra={}):
-        send_notification_to_user.delay(self.id, title, body, url, extra)
+   # def send_notification(self, title, body, url=None, extra={}):
+     #   send_notification_to_user.delay(self.id, title, body, url, extra)
 
     @property
     def is_staff(self):

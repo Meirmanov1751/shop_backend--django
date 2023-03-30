@@ -63,6 +63,7 @@ class UserViewSet(UpdateModelMixin, GenericViewSet):
     def login_or_register(self, request, *args, **kwargs):
         try:
             user_data = login(request, self.get_renderer_context())
+            serializer = LoginSerializer
             return Response(data=user_data)
         except LoginException:
             # register if user didn't found
