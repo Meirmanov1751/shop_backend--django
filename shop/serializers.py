@@ -14,22 +14,11 @@ class ShopItemSerializer(ModelSerializer):
     fields = '__all__'
 
 
-# class ShopOrderSerializer(ModelSerializer):
-  # class Meta:
-  #   model = ShopOrder
-  #   fields = '__all__'
-
 
 class ShopScheduleSerializer(ModelSerializer):
   class Meta:
     model = ShopSchedule
     fields = '__all__'
-
-
-# class ShopOrderItemSerializer(ModelSerializer):
-#   class Meta:
-#     model = ShopOrderItem
-#     fields = '__all__'
 
 
 class ShopItemImageSerializer(ModelSerializer):
